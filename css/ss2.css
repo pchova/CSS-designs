@@ -1,0 +1,80 @@
+/* 
+    Created on : Jul 19, 2022, 12:53:57 AM
+    Author     : pchova
+*/
+body {
+   background-color: black; /** #D9F7FA; */
+   color: #37a8c4; /** #1e5fb3; */
+   
+   font-size: 40px;
+   font-family: Bayon;
+   font-weight: 400;
+   font-variation-settings: "wght" 100;
+   text-transform: uppercase;
+   
+   margin: 40px;
+}
+
+header {
+    /** make the svg logo 'INA' go behind everything, this is layer 1,2, and now 3 on top of 0 */
+    position: relative;
+    z-index: 3;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Bayon', sans-serif;
+}
+footer a:visited {
+    color: #c46137;
+}
+
+/** SuperHi Tutorial #2 CSS - Overlay Logo with an Outline Effect in CSS */
+section {
+    /** make the svg logo 'INA' go behind everything, this is later 1 on top of 0 */
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+section div {
+    margin: 32px 32px 80px 32px;
+}
+
+section img {
+    margin-bottom: 12px;
+}
+
+img {
+    height: 400px;
+    width:  350px;
+}
+
+div.filled, div.outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /** We want the svg logo to be behind everything so index= 0 like layer 0 */
+    z-index: 0;
+    pointer-events: none; /** Be able to click through, i.e if the photo under was a link */
+    
+    background-image: url(../images/INA.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;   /** Needed if the svg is too large or too small,
+                                it will fit the page */ 
+}
+
+div.outline {
+    background-image: url(../images/ina-outline.svg);
+    z-index: 2;
+}

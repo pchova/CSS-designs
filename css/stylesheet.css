@@ -1,0 +1,103 @@
+/* 
+    Created on : Jul 10, 2022, 12:30:18 PM
+    Author     : pchova
+*/
+
+/* 
+    Created on : Jul 10, 2022, 12:30:18 PM
+    Author     : pchova
+*/
+body {
+    font-family: 'Bayon', sans-serif;
+    font-size: 24px;
+    
+   background-color: #D9F7FA;
+   color: #0D0D0D;
+}
+
+header{
+    background-image: url("../images/sunlight.jpg");
+    background-size: cover; /*  both its height and width completely cover the container while preserving ratio */
+    background-position: center; /*  position defines an x/y coordinate, to place an item relative to the 
+                                     edges of an element's box*/
+    
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;    /* moves items within parent container(aka the header) along the y-axis/ up & down  */
+    justify-content: center; /* moves items within parent container(aka the header) along the x-axis/ left to right */
+}
+
+header img {
+    height: 100%;
+    width:  100%;
+    object-fit: contain;  /** helps for various screen sizes */
+}
+
+header a {
+    width: 275px;
+    height: 275px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Bayon', sans-serif;
+}
+
+h2 {
+   line-height: 1.1; 
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 1.6em 0 1.6em 0;
+}
+
+/** SuperHi Tutorial #1 CSS - Split Side Screens with Sticky Sides */
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+section div {
+    width: 50%;     /** Makes the text section go on 1-side*/
+}
+
+section div.text {
+    padding: 60px;
+    
+    /** allows the padding to not shift the other containers, div.full-image */
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+section div.full-image {
+    height: 100vh;
+    
+    background-image: url("../images/toa-heftiba.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    /** Make text sticky in each container */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+section div.image-2 {
+    background-image: url("../images/girl.jpg");
+}
+
+section div.image-3 {
+    background-image: url("../images/palestine.jpg");
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+

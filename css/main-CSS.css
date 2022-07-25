@@ -1,0 +1,48 @@
+/* 
+    Created on : Jul 10, 2022, 12:30:18 PM
+    Author     : pchova
+*/
+body {
+    font-family: 'Bayon', sans-serif;
+    font-size: 24px;
+    
+   background-color: #D9F7FA;
+   color: #0D0D0D;
+}
+
+header{
+    background-image: url("../images/sunlight.jpg");
+    background-size: cover; /*  both its height and width completely cover the container while preserving ratio */
+    background-position: center; /*  position defines an x/y coordinate, to place an item relative to the 
+                                     edges of an element's box*/
+    
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;    /* moves items within parent container(aka the header) along the y-axis/ up & down  */
+    justify-content: center; /* moves items within parent container(aka the header) along the x-axis/ left to right */
+}
+
+header img {
+    height: 60%;
+    width: 60%;
+    object-fit: contain;  /** helps for various screen sizes */
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Bayon', sans-serif;
+}
+
+h2 {
+   line-height: 1.1; 
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 1.6em 0 1.6em 0;
+}
+

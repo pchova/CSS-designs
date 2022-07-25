@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 14, 2022, 12:30:48 PM
+    Author     : pchova
+*/
+
+header {
+    height: 75vw;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+section {
+    display: block;
+}
+
+section div {
+    width: 100%;
+}
+
+section div.text {
+    padding: 30%;
+}
+
+section div.full-image {
+    /** makes images on a phone or tablet look more square / flows better */
+    height: 100vw;
+}
+
